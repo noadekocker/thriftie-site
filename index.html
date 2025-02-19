@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,10 +28,22 @@
         <div class="background-container">
             <div class="content">
                 <h1 class="main-title">Cutie meets conscious: find it with Thriftie.</h1>
-                <p class="description">Upload a photo of your outfit, and our AI-powered tool will recognize the clothing items in it. From shirts to shoes, our advanced image recognition technology identifies the pieces you love. Once we’ve recognized your items, we’ll show you similar pieces available on Vinted, so you can shop second-hand and find the perfect match without the hassle.</p>
+                <p class="description">
+                    Upload a photo of your outfit, and our AI-powered tool will recognize the clothing items in it. 
+                    From shirts to shoes, our advanced image recognition technology identifies the pieces you love. 
+                    Once we’ve recognized your items, we’ll show you similar pieces available on Vinted, 
+                    so you can shop second-hand and find the perfect match without the hassle.
+                </p>
 
                 <div class="decorative-box">
                     <div class="striped-border"></div>
+                </div>
+
+                <!-- File Upload and AI Analysis -->
+                <div class="ai-analysis">
+                    <input type="file" id="imageUpload">
+                    <button class="btn red-btn" onclick="runClarifaiWorkflow()">Analyseer Afbeelding</button>
+                    <pre id="result"></pre>
                 </div>
 
                 <div class="buttons">
