@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thriftie</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -28,28 +27,19 @@
         <div class="background-container">
             <div class="content">
                 <h1 class="main-title">Cutie meets conscious: find it with Thriftie.</h1>
-                <p class="description">
-                    Upload a photo of your outfit, and our AI-powered tool will recognize the clothing items in it. 
-                    From shirts to shoes, our advanced image recognition technology identifies the pieces you love. 
-                    Once we’ve recognized your items, we’ll show you similar pieces available on Vinted, 
-                    so you can shop second-hand and find the perfect match without the hassle.
-                </p>
+                <p class="description">Upload a photo of your outfit, and our AI-powered tool will recognize the clothing items in it. From shirts to shoes, our advanced image recognition technology identifies the pieces you love. Once we’ve recognized your items, we’ll show you similar pieces available on Vinted, so you can shop second-hand and find the perfect match without the hassle.</p>
 
                 <div class="decorative-box">
                     <div class="striped-border"></div>
                 </div>
 
-                <!-- File Upload and AI Analysis -->
-                <div class="ai-analysis">
-                    <input type="file" id="imageUpload">
+                <!-- The div with the dotted line where the upload button goes -->
+                <div class="upload-box">
+                    <input type="file" id="imageUpload" />
                     <button class="btn red-btn" onclick="runClarifaiWorkflow()">Analyseer Afbeelding</button>
-                    <pre id="result"></pre>
                 </div>
 
-                <div class="buttons">
-                    <button class="btn red-btn">WTF is Thriftie?</button>
-                    <button class="btn red-btn">Download Plugin</button>
-                </div>
+                <p id="result"></p>
             </div>
         </div>
     </main>
@@ -60,5 +50,8 @@
             <p>&copy; 2025 Thriftie. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Include the script at the bottom -->
+    <script src="script.js" defer></script>
 </body>
 </html>

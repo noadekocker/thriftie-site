@@ -22,6 +22,20 @@ async function runClarifaiWorkflow() {
         });
 
         const data = await response.json();
-        document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+        console.log(data);  // Voeg deze log toe om te zien wat de API terugstuurt
+        if (data && data.results) {
+            document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+        } else {
+            document.getElementById('result').innerText = "Geen resultaten gevonden.";
+        }
     };
 }
+
+const results = data.results[0].outputs[0].data.concepts;  // Dit is slechts een voorbeeld, afhankelijk van je workflow
+if (results) {
+    document.getElementById('result').innerText = "Herkenbare items: " + results.map(item => item.name).join(", ");
+} else {
+    document.getElementById('result').innerText = "Geen resultaten gevonden.";
+}
+
+
